@@ -12,6 +12,7 @@ public class Profesor extends Usuario{
 	public void showdatos() {
 		
 		System.out.println(getnombre()+" "+getapellido()+" edad: "+getedad()+" genero: "+getgenero());
+		System.out.println("Tiene "+prestamos+" prestamos");
 	}
 	
 	public void prestamo(int diasprestamo) {
