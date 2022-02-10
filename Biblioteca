@@ -1,9 +1,15 @@
 package com.Examen1.jcc;
 
+import com.empresaherencia.jcc.Empleado;
+import com.empresaherencia.jcc.EmpleadoComision;
+
 public class Biblioteca {
 	
 	private String id, nombre, direccion;
 	private int aniofundacion;
+	public Estudiante[] estu = new Estudiante[30];
+	public Profesor[] profe = new Profesor[30];
+	public int cont1=0, cont2=0;//Contador de usuarios
 	
 	//Este es el constructor
 	public Biblioteca(String id, String nombre, String direccion, int fecha) {
@@ -14,7 +20,31 @@ public class Biblioteca {
 		this.aniofundacion = fecha;
 		
 	}
+
+	//Aqui se genera un nuevo estudiante 
+	public void nuevoestudiante(String nombre, String apellido, int edad, String genero) {
+		Estudiante est1 = new Estudiante(nombre,apellido,edad,genero);
+		estu[cont1]=est1;
+		cont1++;
+	}
+
+	//Aqui se genera un nuevo profesor
+	public void nuevoeprofesor(String nombre, String apellido, int edad, String genero) {
+		Profesor prof1 = new Profesor(nombre,apellido,edad,genero);
+		profe[cont2]=prof1;
+		cont2++;
+	}
 	
-	
+	//Impresion de datos
+	public void imprimirusuarios()	{
+		int j;
+		
+		for(j=0;j<cont1;j++)
+		{
+			System.out.println("Datos del alumno "+j+":");
+			estu[j].showdatos();
+		}
+		
+	}
 
 }
