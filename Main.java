@@ -2,7 +2,7 @@ package com.Examen1.jcc;
 
 public class Main {
 	
-	static void main (String[] args)
+	public static void main(String[] args)
 	{
 		Biblioteca bib1 = new Biblioteca("1234", "Biblioteca Benito Juarez", "Av Adolfo Lopez Mateos", 1920);
 		bib1.nuevoeprofesor("Juan","Castillo", 20, "H");
@@ -10,7 +10,7 @@ public class Main {
 		bib1.nuevoestudiante("Mandy", "Frisch", 13, "M");
 		
 		
-		
+		bib1.imprimirusuarios();
 	}
 
 }
