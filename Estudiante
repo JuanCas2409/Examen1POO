@@ -1,5 +1,17 @@
 package com.Examen1.jcc;
 
-public class Estudiante {
+public class Estudiante extends Usuario{
+	
+	private int numprestamos;
+	
+	Estudiante(String n, String a, int e, String g)
+	{
+		super(n,a,e,g);
+	}
+
+	public void showdatos() {
+		
+		System.out.println(nombre);
+	}
 
 }
