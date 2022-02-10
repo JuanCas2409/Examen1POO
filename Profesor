@@ -2,10 +2,26 @@ package com.Examen1.jcc;
 
 public class Profesor extends Usuario{
 	
+	private int prestamos=0;
+	
 	Profesor(String n, String a, int e, String g)
 	{
 		super(n,a,e,g);
 	}
+	
+	public void showdatos() {
+		
+		System.out.println(getnombre()+" "+getapellido()+" edad: "+getedad()+" genero: "+getgenero());
+	}
+	
+	public void prestamo(int diasprestamo) {
+		
+		if(diasprestamo>1||diasprestamo<=14)
+		{
+			if(prestamos<5)
+				prestamos++;
+		}
+	}
+
 
 }
-
