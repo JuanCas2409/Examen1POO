@@ -2,7 +2,7 @@ package com.Examen1.jcc;
 
 public class Estudiante extends Usuario{
 	
-	private int numprestamos;
+	private int prestamos=0;
 	
 	Estudiante(String n, String a, int e, String g)
 	{
@@ -11,7 +11,16 @@ public class Estudiante extends Usuario{
 
 	public void showdatos() {
 		
-		System.out.println(nombre);
+		System.out.println(getnombre()+" "+getapellido()+" edad: "+getedad()+" genero: "+getgenero());
+	}
+	
+	public void prestamo(int diasprestamo) {
+		
+		if(diasprestamo>1||diasprestamo<=7)
+		{
+			if(prestamos<3)
+				prestamos++;
+		}
 	}
 
 }
