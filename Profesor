@@ -1,5 +1,11 @@
 package com.Examen1.jcc;
 
-public class Profesor {
+public class Profesor extends Usuario{
+	
+	Profesor(String n, String a, int e, String g)
+	{
+		super(n,a,e,g);
+	}
 
 }
+
