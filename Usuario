@@ -16,5 +16,18 @@ public class Usuario {
 	public String getnombre() {
 		return nombre;
 	}
+	
+	public String getapellido() {
+		return apellido;
+	}
+	
+	public int getedad()	{
+		return edad;
+	}
+	
+	public String getgenero()
+	{
+		return genero;
+	}
 
 }
