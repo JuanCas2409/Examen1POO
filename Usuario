@@ -1,5 +1,20 @@
 package com.Examen1.jcc;
 
 public class Usuario {
+	
+	private String nombre, apellido, genero;
+	private int edad;
+	
+	Usuario(String nombre, String apellido, int edad, String genero)
+	{
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.edad = edad;
+		this.genero = genero;
+	}
+	
+	public String getnombre() {
+		return nombre;
+	}
 
 }
