@@ -1,33 +1,27 @@
 package com.Examen1.jcc;
 
-public class Usuario {
+public class Estudiante extends Usuario{
 	
-	private String nombre, apellido, genero;
-	private int edad;
+	private int prestamos=0;
 	
-	Usuario(String nombre, String apellido, int edad, String genero)
+	Estudiante(String n, String a, int e, String g)
 	{
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.edad = edad;
-		this.genero = genero;
+		super(n,a,e,g);
+	}
+
+	public void showdatos() {
+		
+		System.out.println(getnombre()+" "+getapellido()+" edad: "+getedad()+" genero: "+getgenero());
+		System.out.println("Tiene "+prestamos+" prestamos");
 	}
 	
-	public String getnombre() {
-		return nombre;
-	}
-	
-	public String getapellido() {
-		return apellido;
-	}
-	
-	public int getedad()	{
-		return edad;
-	}
-	
-	public String getgenero()
-	{
-		return genero;
+	public void prestamo(int diasprestamo) {
+		
+		if(diasprestamo>1||diasprestamo<=7)
+		{
+			if(prestamos<3)
+				prestamos++;
+		}
 	}
 
 }
