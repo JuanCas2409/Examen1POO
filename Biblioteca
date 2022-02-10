@@ -41,8 +41,16 @@ public class Biblioteca {
 		
 		for(j=0;j<cont1;j++)
 		{
-			System.out.println("Datos del alumno "+j+":");
+			estu[j].prestamo(j);
+			estu[j].prestamo(j);
+			System.out.println("Datos del alumno "+(j+1)+":");
 			estu[j].showdatos();
+		}
+		for(j=0;j<cont2;j++)
+		{
+			profe[j].prestamo(j);
+			System.out.println("Datos del profesor "+(j+1)+":");
+			profe[j].showdatos();
 		}
 		
 	}
